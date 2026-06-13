@@ -8757,8 +8757,8 @@ function _restoreMessageScrollSnapshotSameFrame(snapshot, opts){
 }
 function _renderMessagesWithScrollSnapshot(options){
   const scrollSnapshot=_captureMessageScrollSnapshot();
-  renderMessages({...(options||{}),preserveScroll:true,adjustForTopGrowth:true});
-  _restoreMessageScrollSnapshotSameFrame(scrollSnapshot, { adjustForTopGrowth: true });
+  renderMessages({...(options||{}),preserveScroll:true});
+  _restoreMessageScrollSnapshotSameFrame(scrollSnapshot);
 }
 let _assistantTurnAnchorSettledFinalAnswerWarned=false;
 function _assistantTurnAnchorSettledFinalAnswer(message, content, context){
